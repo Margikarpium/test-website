@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css"
+</head>  
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logomargiarts-removebg-preview.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">My Work</a></li>
+                <i class="fas fa-times"></i>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>3D Artist, Concept Artist</p>
+            <h1>Hi, I'm <span>Margarita</span> Pelekanou</h1>
+        </div>
+    </div>        
+</div>
+
+<!-------------about------------------>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Currently I am a student in Computer Animation and VFX. 
+                My passion lies in creating 3D models, 3D backgrounds and 
+                character concept art for video games. As a means to grow, I have created
+                this website to upload my work and ongoing projects.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('software')">Software</p>
+                    <p class="tab-links" onclick="opentab('studying')">Studying</p>
+                </div>
+                <div class="tab-contents active-tab" id="software">
+                    <ul>
+                        <li><span>3D ART</span><br>Maya<br>Zbrush<br>Substance Painter</li>
+                        <li><span>VFX</span><br>Nuke<br>Houdini<br>3D Equalizer</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="studying">
+                    <ul>
+                        <li><span>Computer Animation and VFX (Bsc) University of Portsmouth</span</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------portfolio------------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>3D ART</h3>
+                    <button onclick="goTo3dModeling()"><a href="#">&#129094</i></a></button>
+                </div>  
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Visual Effects</h3>
+                    <button onclick="goTo3dModeling()"><a href="#">&#129094</i></a></button>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Concept Art</h3>
+                    <button onclick="goTo3dModeling()"><a href="#">&#129094</i></a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<body>
+
+    <!-- Your website content goes here -->
+
+    <footer>
+        <p>&copy; Made by me. All rights reserved.</p>
+    </footer>
+
+</body>
+   
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    function goTo3dModeling() {
+        // Replace 'portfolio.html' with the actual filename of your portfolio page
+        window.location.href = '3dmodeling.html';
+    }
+</script>
+
+</body>
+</html>
